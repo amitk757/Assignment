@@ -1,0 +1,65 @@
+<p>List of Users </p>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Address</th>
+            <th>Edit/update</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of _listclass;let srno = index">
+            <td>{{item.id}}</td>
+            <td>
+                {{item.firstname}}
+            </td>
+            <td>
+                {{item.lastname}}
+            </td>
+            <td>
+                {{item.age}}
+            </td>
+            <td>
+                {{item.gender}}
+            </td>
+            <td>
+                {{item.address}}
+            </td>
+            <td> 
+                <a style="cursor:pointer;" (click)="EditUser(item)">Edit</a>
+                <a style="cursor: pointer;" (click)="DeleteUser(item)">Delete</a> 
+            </td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+<table>
+    <tr>
+        <td>Id</td>
+        <td><label for="">{{_selectedUser.id}}</label></td>
+        <td>Firstname</td>
+        <td><input type="text" [(ngModel)]="_selectedUser.firstname"></td>
+        <td>Last Name</td>
+        <td><input type="text" [(ngModel)]="_selectedUser.lastname"></td>
+        <td>Age</td>
+        <td><input type="text" [(ngModel)]="_selectedUser.age"></td>
+        <td>Gender</td>
+        <td>
+        <select name="gender" id="gender" [(ngModel)]="_selectedUser.gender">
+                    <option value="-1"[selected]="_selectedUser.gender=='-1'">--Select--</option>
+                    <option value="M" [selected]="_selectedUser.gender=='M'">Male</option>
+                    <option value="F" [selected]="_selectedUser.gender=='F'">Female</option>
+                    <option value="T" [selected]="_selectedUser.gender=='T'">Transgender</option>
+        </select>    
+
+        </td>   
+        <td>Address</td>
+        <td><input type="text" [(ngModel)]="_selectedUser.address"></td>
+       
+        <td><button (click)="Submit()"> Submit</button></td>
+    </tr>
+</table>
