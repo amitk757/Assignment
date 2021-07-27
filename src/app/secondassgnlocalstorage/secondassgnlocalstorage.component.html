@@ -1,0 +1,32 @@
+<div class="hero">
+    <div class="form-box">
+        <div class="button-box">
+            <div id="btn"> </div>
+            <button class="toggle-btn" type="button" (click)="login()">Log In</button>
+            <button class="toggle-btn" type="button"(click)="register()">Register</button>
+
+        </div>
+        <div class="social-icons">
+            <img src="../../assets/Images/fb.png">
+            <img src="../../assets/Images/gp.png">
+            <img src="../../assets/Images/tw.png">
+        </div>
+
+        <form id="login" class="input-group">
+            <input type="text" class="input-field" placeholder="User Id" required>
+            <input type="text" class="input-field" placeholder="Enter Password" required>
+            <input type="checkbox" class="check-box"><span>Remember Password</span>
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+        <form id="register" class="input-group" style="margin-top: -20px;">
+            <input type="text" class="input-field" placeholder="User Id" required>
+            <input type="email" class="input-field" placeholder="Email Id" required>
+            <input type="text" class="input-field" placeholder="Enter Password" required>
+            <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+            <button type="submit" class="submit-btn">Register </button>
+        </form>
+    </div>
+
+
+
+</div>

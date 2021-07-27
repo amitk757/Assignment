@@ -5,10 +5,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ListofusersComponent } from './firstassignment/listofusers/listofusers.component';
 
+import { SecondassgnlocalstorageComponent } from './secondassgnlocalstorage/secondassgnlocalstorage.component';
+import { Secondassgnlocalstoragecomp2Component } from './secondassgnlocalstoragecomp2/secondassgnlocalstoragecomp2.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    ListofusersComponent
+    ListofusersComponent,
+    
+    SecondassgnlocalstorageComponent,
+    Secondassgnlocalstoragecomp2Component
   ],
   imports: [
     BrowserModule,
