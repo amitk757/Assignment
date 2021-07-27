@@ -43,6 +43,7 @@ this._listclass=[
   DeleteUser(data:listuser)
   {
     this.DeleteU(data.id,this._listclass);
+    this._selectedUser={id:0,firstname:"",lastname:"",age:0,gender:'-1',address:""};
   }
 
   DeleteU(key:number,_data:listuser[])

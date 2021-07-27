@@ -1,5 +1,5 @@
 <p>List of Users </p>
-<table>
+<table class="table">
     <thead>
         <tr>
             <th>Id</th>
@@ -30,17 +30,16 @@
                 {{item.address}}
             </td>
             <td> 
-                <a style="cursor:pointer;" (click)="EditUser(item)">Edit</a>
+                <a style="cursor:pointer; margin: 10px;"  (click)="EditUser(item)">Edit</a>
                 <a style="cursor: pointer;" (click)="DeleteUser(item)">Delete</a> 
             </td>
         </tr>
     </tbody>
 </table>
-<hr>
-<table>
+<hr class="py-3">
+<table class="table ">
     <tr>
-        <td>Id</td>
-        <td><label for="">{{_selectedUser.id}}</label></td>
+       
         <td>Firstname</td>
         <td><input type="text" [(ngModel)]="_selectedUser.firstname"></td>
         <td>Last Name</td>
